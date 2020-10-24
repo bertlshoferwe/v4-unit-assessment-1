@@ -2,17 +2,17 @@
 /* Create a variable called 'myName' with a value that is your name. */
 
 //CODE HERE 
-
+const myName='Weston'
 //////////////////PROBLEM 2////////////////////
 /* Create a variable called 'faveNum' with a value that is your favorite number. */
 
 //CODE HERE
-
+const faveNum = 9
 //////////////////PROBLEM 3////////////////////
 /* Create a variable called 'lovesCode' and assign it a boolean value. */
 
 //CODE HERE
-
+const lovesCode = true
 //////////////////PROBLEM 4////////////////////
 /*
   Create a function called 'sum' that takes in two parameters, 'num1' and 'num2'. 
@@ -20,7 +20,9 @@
 */
 
 //CODE HERE
-
+let sum = function( num1, num2 ) {
+  return num1+num2
+}
 //////////////////PROBLEM 5////////////////////
 /*
   Create a function called 'lovesCodeChecker' that takes in a single parameter called 'x'. 
@@ -30,7 +32,13 @@
 */
 
 //CODE HERE
-
+let lovesCodeChecker = function( x ){
+  if( x === true){
+    return true
+  }else{
+    return false
+  }
+}
 //////////////////PROBLEM 6////////////////////
 /*
   Create a function called 'oddChecker' that takes in one parameter, 'num'. 
@@ -40,7 +48,16 @@
 */
 
 //CODE HERE
+let oddChecker = function( num ) {
+  if( num%2 === 0 ){
 
+    return 'the number is even'
+
+  }else{
+
+    return 'the number is odd'
+  }
+}
 //////////////////PROBLEM 7////////////////////
 /*
   Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. 
@@ -49,7 +66,9 @@
 */
 
 //CODE HERE
-
+let iLove = function( name, love ){
+  return (name +' loves ' + love) 
+}
 
 //////////////////PROBLEM 8////////////////////
 /* Create a copy of the faveColors array called 'colorCopy' using the slice method. */
@@ -57,12 +76,12 @@
 const faveColors = ['red', 'green', 'black']
 
 //CODE HERE
-
+let colorCopy = faveColors.slice()
 //////////////////PROBLEM 9////////////////////
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
 
 //CODE HERE
-
+colorCopy.push( 'green' )
 //////////////////PROBLEM 10////////////////////
 /*
   Using an array method, create a new array called 'middleNums' from the 
@@ -72,6 +91,7 @@ const faveColors = ['red', 'green', 'black']
 const numbers = [1, 2, 3, 4, 5]
 
 //CODE HERE
+let middleNums = numbers.slice(1,4)
 
 //////////////////PROBLEM 11////////////////////
 /*
@@ -89,6 +109,15 @@ const numbers = [1, 2, 3, 4, 5]
 
 //CODE HERE
 
+let me = {
+  firstName: 'Weston',
+  state: 'Utah',
+  age: 27,
+  greeter: function() {
+    return 'Hello! My name is ' + this.firstName + ' and I live in ' + this.state
+  }
+}
+
 //////////////////PROBLEM 12////////////////////
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr', 
@@ -104,6 +133,27 @@ const numbers = [1, 2, 3, 4, 5]
 
 // CODE HERE
 
+let bigOrSmall = function( arr ) {
+  // define new array of answers
+  let answers = [];
+
+  // for loop to iterate over array
+  for( var i = 0; i <= arr.length-1; i++){
+
+    // if statement to determin if greater then or less then 100 and what to do 
+    if( arr[i] < 100){
+      answers.push( 'big' );
+    }else{
+      answers.push( 'small' );
+    }
+
+  }
+
+  // return answers array
+  return answers;
+ 
+}
+
 //////////////////PROBLEM 13////////////////////
 /* 
   Create a function called 'arrayReverser' that takes in one parameter, 'arr'. 
@@ -115,6 +165,20 @@ const numbers = [1, 2, 3, 4, 5]
 */
 
 //CODE HERE
+
+let arrayReverser = function( arr ) {
+
+  // define new array
+  let reversed = [];
+
+  // loop over current array backwards and push to new array above
+  for( var i = arr.length-1; i > 0; i--){
+    reversed.push( arr[i] );
+  }
+
+  // return new array
+  return reversed;
+} 
 
 //////////////////PROBLEM 14////////////////////
 
@@ -140,16 +204,16 @@ function secondFunction() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ['global', 'inner', 'outer', 'functional']
+let globalScope = ['global']
 
 //This array should contain the variable names (as strings) accessible in the firstFunction function.
-let firstFunctionScope = ['global', 'inner', 'outer', 'functional']
+let firstFunctionScope = ['global', 'outer']
 
 //This array should contain the variable names (as strings) accessible in the innerFunction function.
-let innerFunctionScope = ['global', 'inner', 'outer', 'functional']
+let innerFunctionScope = ['global', 'inner', 'outer']
 
 //This array should contain the variable names (as strings) accessible in the secondFunction function.
-let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
+let secondFunctionScope = ['global', 'functional']
 
 
 //////////////////PROBLEM 15////////////////////
@@ -159,7 +223,11 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
 */
 
 //CODE HERE
+let firstItem = function(arr, cb) {
 
+  cb( arr[0] )
+
+}
 //////////////////PROBLEM 16////////////////////
 /* 
   Write a function called isItBob that takes in two arguments: an object and a callback function. 
@@ -170,6 +238,16 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
 
 //CODE HERE
 
+let isItBob = function( obj, cb ) {
+
+  if( obj.name === 'Bob'){
+    cb(true)
+  }else{
+    cb(false)
+  }
+
+}
+
 //////////////////PROBLEM 17////////////////////
 /*
   Write a function called giveMeDoubles that takes in two arguments: an array of numbers and a callback.  
@@ -177,7 +255,16 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
 */
 
 //CODE HERE
+let giveMeDoubles = function( arr, cb ) {
 
+let doubled = [];
+
+  for( var i = 0; i <= arr.length-1; i++) {
+    doubled.push( arr[i]*2 )
+  }
+
+  cb(doubled)
+}
 //////////////////PROBLEM 18////////////////////
 /*
   Write a function called carFactory that takes in three arguments: a make, model, and year.  
@@ -187,3 +274,19 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
 */
 
 //CODE HERE
+let carFactory = function( make, model, year){
+
+let car = {
+  make: make,
+  model: model,
+  year: year
+}
+
+
+  if( car.year > 2018 ){
+    cars.isNew = true;
+  }else{
+    car.isNew = false
+  }
+
+}

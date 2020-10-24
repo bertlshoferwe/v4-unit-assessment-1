@@ -1,0 +1,201 @@
+html{
+    font-size: 8px;
+    font-family: "Times New Roman", Times, serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+.nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+}
+h1{
+    padding: 0 0 0 1rem;
+}
+
+
+ .contentWrapper{
+     display:flex;
+     flex-direction: column;
+     justify-content: space-around;
+     width: 100vw;
+     margin-bottom: 5rem;
+ }
+
+ .container{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+     height: 45rem;
+ }
+ h2{
+     display: flex;
+     align-self: start;
+     padding: 0 0 0 2rem
+ }
+ .containerWrapper{
+     width: 95%;
+     height: 100%;
+     border-style: dotted;
+ }
+
+ /* styles for top box with squares and rectangles */
+ .squares{
+     display: flex;
+     flex-direction: row;
+     align-items: flex-end;
+ }
+ .purpleReq{
+     height: 20rem;
+     width:40rem;
+     background-color: purple;
+     margin: 1rem;
+     border-style: solid;
+     border-color: red;
+ }
+ .blueSqu{
+    height: 20rem;
+    width: 20rem;
+    background-color: blue;
+    margin: 1rem;
+    box-shadow: 5px 6px 4px 0px #000000;
+ }
+ .pinkSqu{
+    height: 35rem;
+    width:20rem;
+    background-color: pink;
+    margin: 1rem;
+ }
+
+ /* styles for second box with circles */
+ .circles{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-content: flex-end;
+     align-items: flex-start;
+ }
+ /* wrapper of snowman */
+ .snowman{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 0 0 1rem;
+ }
+ /* styles for snowmans top ball */
+ .top{
+     display: flex;
+     flex-direction: column;
+     border-style: solid;;
+     align-items: center;
+     border-radius: 50%;
+     width: 8rem;
+     height: 8rem;
+ }
+
+ /* styles for snowmans eyeballs */
+ .eyes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 0 0 ;
+    height: 50%;
+ }
+.eyballs{
+    display: flex;
+    align-self: flex-end;
+    font-size: 10rem;
+}
+.noseWrapper{
+    margin: -15 0 0 -10;
+}
+.nose{
+    height: 1.5rem ;
+    width: 1.5rem;
+}
+
+ .middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+}
+.coalWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.coal{
+    font-size: 24px;
+}
+.bottom{
+    border-style: solid;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+}
+
+
+ /* styles for last box with everything */
+ .everythingWrapper{
+     position: relative;
+ }
+
+ .yelSquare{
+     position: absolute;
+     top: 1rem;
+     left: 1rem;
+     height: 20rem;
+     width:  20rem;
+     background-color: yellow;
+ }
+ .greeCircle{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 14rem;
+    width:  14rem;
+    border-radius: 50%;
+    background-color: green;
+ }
+ .browSquare{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 10rem;
+    width:  10rem;
+    background-color: brown;
+ }
+ .blueCircle{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 8rem;
+    width:  8rem;
+    border-radius: 50%;
+    background-color: blue;
+ }
+ .fish{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    height: 6rem;
+    width:  6rem;
+ }

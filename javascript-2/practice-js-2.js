@@ -10,7 +10,7 @@
 */
 
 //CODE HERE
-
+ const gitDefinition = 'version-control system for tracking changes';
 //////////////////PROBLEM 2////////////////////
 /*
     Create a variable called 'gitHubDefinition'.  
@@ -18,7 +18,7 @@
 */
 
 //CODE HERE
-
+const gitHubDefinition = 'code hosting platform for version-controle and collaboration'
 //////////////////PROBLEMS 3 - 9////////////////////
 /*
     For the next several problems you will be creating objects containing information about different git 
@@ -35,6 +35,11 @@
 
 //CODE HERE
 
+const init = {
+    description: 'initiates a git respratory inside current directory.',
+    code: 'git init'
+}
+
 //////////////////PROBLEM 4////////////////////
 /*
     Create an object called 'clone' with 'description' and 'code' properties 
@@ -42,6 +47,13 @@
 */
 
 //CODE HERE
+
+const clone = {
+
+    description: 'creates a copy of github repo on local machine',
+    code: ' git clone (clone url)'
+
+}
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -51,6 +63,12 @@
 
 //CODE HERE
 
+const status = {
+    description: 'current status of your git project',
+    code:'git status'
+
+}
+
 //////////////////PROBLEM 6////////////////////
 /*
     Create an object called 'add' with 'description' and 'code' properties 
@@ -58,6 +76,12 @@
 */
 
 //CODE HERE
+
+const add = {
+    description: 'add information to be stageded',
+    code: 'git add (the files you would like to add)'
+}
+
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -67,6 +91,11 @@
 
 //CODE HERE
 
+    const commit = {
+        description: 'take files added and commit to github',
+        code: 'git commit -m (your message for commit)'
+    }
+
 //////////////////PROBLEM 8////////////////////
 /*
     Create an object called 'addRemote' with 'description' and 'code' properties
@@ -74,7 +103,10 @@
 */
 
 //CODE HERE
-
+const addRemote = {
+    description: 'setting the orgin or location for local repo to be added to github',
+    code: 'git remote add origin (url to repo)'
+}
 //////////////////PROBLEM 9////////////////////
 /*
     Create an object called 'push' with 'description' and 'code' properties 
@@ -82,3 +114,7 @@
 */
 
 //CODE HERE
+const push = {
+    description: 'pushes local repo to github repo',
+    code: 'git push'
+}
